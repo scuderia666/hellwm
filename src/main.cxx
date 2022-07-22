@@ -2,12 +2,12 @@
 
 Backend backend;
 
-int tick() {
-	return backend.tick();
+int init() {
+	return backend.init();
 }
 
-int run() {
-	return backend.init();
+int tick() {
+	return backend.tick();
 }
 
 void quit() {
@@ -15,7 +15,7 @@ void quit() {
 }
 
 int main(int argc, char *argv[]) {
-	int ret = run();
+	int ret = init();
 	while (ret == 0)
 		ret = tick();
 	quit();
